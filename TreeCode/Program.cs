@@ -10,6 +10,18 @@ namespace TreeCode
     {
         static void Main(string[] args)
         {
+
+            BinarySearchTree<int> binarySearchTree = new BinarySearchTree<int>();
+            binarySearchTree.AddValue(5);
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    binarySearchTree.AddValue(i + 3);
+            //}
+
+            binarySearchTree.AddValue(2);
+            binarySearchTree.AddValue(20);
+
+            binarySearchTree.PrintOutTree();
         }
     }
 }

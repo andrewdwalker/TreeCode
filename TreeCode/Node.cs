@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace TreeCode
 {
-    public class Node<T>
+    public class Node<T> where T : IComparable<T> 
     {
        
       public  Node() {}
        public Node(T value)
-    {
-        _nodeValue = value;
-    }
+        {
+            _nodeValue = value;
+        }
         T _nodeValue;
 
         public T NodeValue
@@ -42,7 +42,31 @@ namespace TreeCode
         public Node<T> Right
         {
             get { return _right; }
-            set { _right = value; }
+            set { _right = value;
+            _right.Parent = this;
+            }
+        }
+
+        public void PrintNodeValue()
+        {
+            Console.WriteLine("Node value is {0:d} and level is {1:d}", _nodeValue, Level);
+
+        }
+
+        public uint Level
+        {
+            get
+            {
+                uint level = 0;
+                Node<T> temp = this;
+                while (temp.Parent != null)
+                {
+                    level++;
+                    temp = temp.Parent;
+                }
+                return level;
+
+            }
         }
     }
 }

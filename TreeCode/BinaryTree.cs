@@ -6,29 +6,47 @@ using System.Threading.Tasks;
 
 namespace TreeCode
 {
-    public class BinaryTree
+    public class BinaryTree<T> where T : IComparable<T> 
     {
-        Node<int> _parent = null;
+        protected Node<T> _parent = null;
 
-        public bool AddValue(int value)
+        public virtual bool AddValue(T value)
         {
             if (_parent == null)
             {
-                _parent = new Node<int>();
+                _parent = new Node<T>();
                 _parent.NodeValue = value;
             }
             else
             {
-                Node<int> temp = _parent;
+                Node<T> temp = _parent;
                 while (temp.Left != null)
                 {
                     temp = temp.Left;
                 }
 
-                temp.Left = new Node<int>(value);
+                temp.Left = new Node<T>(value);
 
             }
 
+            return true; // could return false in derived classes if value already exists?
         }
+
+        public void PrintOutTree()
+        {
+            PrintOutTree(_parent);
+        }
+        public void PrintOutTree(Node<T> node)
+        {
+            if (node == null)
+                return;
+            else
+            {
+                node.PrintNodeValue();
+                PrintOutTree(node.Left);
+                PrintOutTree(node.Right);
+            }
+        }
+
     }
 }

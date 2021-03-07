@@ -1,0 +1,7 @@
+C:\Users\awalker13\Source\Repos\TreeCode\TreeCode\bin\Debug\TreeCode.exe.config
+C:\Users\awalker13\Source\Repos\TreeCode\TreeCode\bin\Debug\TreeCode.exe
+C:\Users\awalker13\Source\Repos\TreeCode\TreeCode\bin\Debug\TreeCode.pdb
+C:\Users\awalker13\Source\Repos\TreeCode\TreeCode\obj\Debug\TreeCode.csprojAssemblyReference.cache
+C:\Users\awalker13\Source\Repos\TreeCode\TreeCode\obj\Debug\TreeCode.csproj.CoreCompileInputs.cache
+C:\Users\awalker13\Source\Repos\TreeCode\TreeCode\obj\Debug\TreeCode.exe
+C:\Users\awalker13\Source\Repos\TreeCode\TreeCode\obj\Debug\TreeCode.pdb
